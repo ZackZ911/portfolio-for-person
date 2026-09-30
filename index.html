@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yuxin Zhu — Portfolio</title>
+<meta name="description" content="Yuxin Zhu — math, Chinese culture and card games.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;700;900&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { red: { DEFAULT:'#B01019', deep:'#7E0B12' }, gold:'#F2B31B', paper:'#F7EBD0', cream:'#FFF6E2', ink:'#2A0C0C' },
+        fontFamily: { display: ['Fraunces','Georgia','serif'], brush: ["'Ma Shan Zheng'","'Noto Serif SC'","serif"], cn: ["'Noto Serif SC'","serif"] }
+      }
+    }
+  }
+</script>
+<style>
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  .lattice{background-image:linear-gradient(45deg,rgba(242,179,27,.10) 25%,transparent 25%,transparent 75%,rgba(242,179,27,.10) 75%),linear-gradient(45deg,rgba(242,179,27,.10) 25%,transparent 25%,transparent 75%,rgba(242,179,27,.10) 75%);background-size:56px 56px;background-position:0 0,28px 28px}
+  .cardback{background-color:#B01019;background-image:linear-gradient(45deg,rgba(242,179,27,.35) 25%,transparent 25%,transparent 75%,rgba(242,179,27,.35) 75%),linear-gradient(45deg,rgba(242,179,27,.35) 25%,transparent 25%,transparent 75%,rgba(242,179,27,.35) 75%);background-size:40px 40px;background-position:0 0,20px 20px}
+  .reveal{display:none}
+  .reveal.on{display:flex;animation:flip .5s ease}
+  @keyframes flip{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body class="bg-ink text-ink font-sans">
+
+<!-- NAV -->
+<nav class="sticky top-0 z-20 bg-red-deep border-b-[3px] border-gold">
+  <div class="max-w-6xl mx-auto px-5 sm:px-10 flex items-center justify-between min-h-[88px]">
+    <a href="#top" class="flex items-center gap-3" aria-label="Home">
+      <span class="w-11 h-11 bg-gold text-red rounded flex items-center justify-center font-brush text-3xl">算</span>
+      <span class="leading-tight">
+        <span class="block font-display font-black text-xl tracking-widest text-cream">YUXIN ZHU</span>
+        <span class="block text-xs tracking-widest text-gold">CARDS · MATH · CULTURE</span>
+      </span>
+    </a>
+    <div class="hidden md:flex items-center gap-1 text-cream font-medium">
+      <a href="#about" class="min-h-[44px] flex items-center px-4 rounded-full hover:text-gold transition-colors">About</a>
+      <a href="#highlights" class="min-h-[44px] flex items-center px-4 rounded-full hover:text-gold transition-colors">Highlights</a>
+      <a href="#skills" class="min-h-[44px] flex items-center px-4 rounded-full hover:text-gold transition-colors">Interests</a>
+      <a href="#philosophy" class="min-h-[44px] flex items-center px-4 rounded-full hover:text-gold transition-colors">One More Card</a>
+      <a href="#contact" class="min-h-[44px] flex items-center px-5 ml-2 rounded-full bg-gold text-ink font-semibold hover:bg-cream transition-colors">Contact</a>
+    </div>
+    <button id="menu-btn" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden w-11 h-11 flex items-center justify-center text-cream" aria-label="Open menu">
+      <svg id="icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg id="icon-close" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="hidden"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden flex flex-col bg-red-deep border-t border-gold/30 px-5 pb-4">
+    <a href="#about" class="min-h-[48px] flex items-center text-cream hover:text-gold">About</a>
+    <a href="#highlights" class="min-h-[48px] flex items-center text-cream hover:text-gold">Highlights</a>
+    <a href="#skills" class="min-h-[48px] flex items-center text-cream hover:text-gold">Interests</a>
+    <a href="#philosophy" class="min-h-[48px] flex items-center text-cream hover:text-gold">One More Card</a>
+    <a href="#contact" class="min-h-[48px] flex items-center text-gold font-semibold">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="top" class="lattice bg-red text-cream py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-10 flex flex-col md:flex-row items-center gap-12">
+    <div class="flex-1 max-w-xl flex flex-col gap-6 text-center md:text-left">
+      <p class="text-sm font-semibold tracking-widest text-gold">GRADE 10 · ST. GEORGE'S SCHOOL</p>
+      <h1 class="font-display font-black text-5xl sm:text-6xl leading-[1.05]">Yuxin Zhu</h1>
+      <p class="text-xl sm:text-2xl text-[#FBE7C0]">I read card games the way other people read books — for the math, the history, and the odd bit of philosophy hiding underneath.</p>
+      <div class="flex gap-4 justify-center md:justify-start flex-wrap pt-2">
+        <a href="#highlights" class="inline-flex items-center justify-center min-h-[52px] px-8 rounded-md bg-gold text-ink font-semibold hover:-translate-y-0.5 transition-transform">See my highlights</a>
+        <a href="#contact" class="inline-flex items-center justify-center min-h-[52px] px-8 rounded-md border-2 border-gold text-cream hover:-translate-y-0.5 transition-transform">Get in touch</a>
+      </div>
+    </div>
+    <img id="hero-photo" src="photo.png" alt="Portrait of Yuxin Zhu" class="w-64 h-72 sm:w-72 sm:h-80 object-cover rounded-lg border-4 border-gold shadow-2xl flex-none">
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="bg-paper text-ink py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-10 flex flex-col md:flex-row items-center gap-12">
+    <div class="flex-1 flex flex-col gap-5">
+      <p class="text-sm font-semibold tracking-widest text-red">ABOUT ME</p>
+      <h2 class="font-display font-black text-4xl sm:text-5xl leading-tight">Grandfather taught me mahjong before I could do long division.</h2>
+      <p class="text-lg leading-relaxed max-w-2xl">Since then I've played and studied nearly every card game I could find a table for — poker, blackjack, baccarat, pai gow, mahjong. What keeps me interested isn't the winning, it's the two things underneath every game: the probability that decides who wins in the long run, and the centuries of Chinese culture that shaped these games long before they reached a casino floor. I'm building toward a future in the casino industry — on the side that designs and understands the games, not just plays them.</p>
+      <div class="flex gap-3 flex-wrap" id="game-tags">
+        <button type="button" data-game="poker" class="game-tag px-4 py-2 border-2 border-red rounded-full text-red font-semibold text-sm hover:bg-red hover:text-cream transition-colors">Poker</button>
+        <button type="button" data-game="blackjack" class="game-tag px-4 py-2 border-2 border-red rounded-full text-red font-semibold text-sm hover:bg-red hover:text-cream transition-colors">Blackjack</button>
+        <button type="button" data-game="baccarat" class="game-tag px-4 py-2 border-2 border-red rounded-full text-red font-semibold text-sm hover:bg-red hover:text-cream transition-colors">Baccarat 百家乐</button>
+        <button type="button" data-game="paigow" class="game-tag px-4 py-2 border-2 border-red rounded-full text-red font-semibold text-sm hover:bg-red hover:text-cream transition-colors">Pai Gow 牌九</button>
+        <button type="button" data-game="mahjong" class="game-tag px-4 py-2 border-2 border-red rounded-full text-red font-semibold text-sm hover:bg-red hover:text-cream transition-colors">Mahjong 麻将</button>
+      </div>
+      <div id="game-popover" class="hidden bg-white border-l-4 border-red rounded-md p-5 max-w-xl shadow-md" role="status" aria-live="polite">
+        <p id="game-popover-title" class="font-display font-bold text-lg mb-1"></p>
+        <p id="game-popover-text" class="text-sm leading-relaxed"></p>
+      </div>
+    </div>
+    <div class="flex-none w-full md:w-72 h-72 bg-[#EBD9AE] border-2 border-red rounded-lg flex flex-col items-center justify-center gap-3 text-red">
+      <span class="font-brush text-8xl opacity-40">牌</span>
+      <span class="text-xs tracking-widest font-semibold">GRADE 10 · ST. GEORGE'S</span>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section id="highlights" class="bg-cream py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-10 flex flex-col gap-12">
+    <div class="flex flex-col gap-4 max-w-2xl">
+      <p class="text-sm font-semibold tracking-widest text-red">HIGHLIGHTS</p>
+      <h2 class="font-display font-black text-4xl sm:text-5xl leading-tight">What I actually spend my time on.</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="group bg-white rounded-lg overflow-hidden border border-red/15 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+        <div class="h-40 bg-red flex items-center justify-center"><span class="font-brush text-6xl text-gold">算</span></div>
+        <div class="p-6 flex flex-col gap-2">
+          <h3 class="font-display font-bold text-xl">Reading the house edge</h3>
+          <p class="text-sm leading-relaxed">I work out the real odds behind games like blackjack and baccarat myself, rather than trusting the number a table posts — probability, combinatorics, expected value.</p>
+        </div>
+      </div>
+      <div class="group bg-white rounded-lg overflow-hidden border border-red/15 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+        <div class="h-40 bg-red flex items-center justify-center"><span class="font-brush text-6xl text-gold">牌</span></div>
+        <div class="p-6 flex flex-col gap-2">
+          <h3 class="font-display font-bold text-xl">Studying the games' origins</h3>
+          <p class="text-sm leading-relaxed">Playing cards trace back to 9th-century China. I dig into how games like mahjong and baccarat took shape, and what that history explains about how they're played today.</p>
+        </div>
+      </div>
+      <div class="group bg-white rounded-lg overflow-hidden border border-red/15 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+        <div class="h-40 bg-red flex items-center justify-center"><span class="font-brush text-6xl text-gold">局</span></div>
+        <div class="p-6 flex flex-col gap-2">
+          <h3 class="font-display font-bold text-xl">Regular table play</h3>
+          <p class="text-sm leading-relaxed">I play poker, blackjack and mahjong regularly with family and friends — it's where the theory I read about actually gets tested against real people and real decisions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERESTS / SKILLS -->
+<section id="skills" class="lattice bg-red text-cream py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-10 flex flex-col gap-12">
+    <div class="flex flex-col gap-4 max-w-2xl">
+      <p class="text-sm font-semibold tracking-widest text-gold">INTERESTS &amp; SKILLS</p>
+      <h2 class="font-display font-black text-4xl sm:text-5xl leading-tight">Games, and what they're built from.</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div class="bg-cream text-ink rounded-lg p-6 flex flex-col gap-2 border-t-4 border-gold">
+        <h3 class="font-display font-bold text-lg">Probability &amp; statistics</h3>
+        <p class="text-sm">The math that decides every game before a single card is dealt.</p>
+      </div>
+      <div class="bg-cream text-ink rounded-lg p-6 flex flex-col gap-2 border-t-4 border-gold">
+        <h3 class="font-display font-bold text-lg">Card games</h3>
+        <p class="text-sm">Poker, blackjack, baccarat, pai gow and mahjong, played and studied.</p>
+      </div>
+      <div class="bg-cream text-ink rounded-lg p-6 flex flex-col gap-2 border-t-4 border-gold">
+        <h3 class="font-display font-bold text-lg">Chinese culture &amp; history</h3>
+        <p class="text-sm">Where these games came from, and what their symbols and language mean.</p>
+      </div>
+      <div class="bg-cream text-ink rounded-lg p-6 flex flex-col gap-2 border-t-4 border-gold">
+        <h3 class="font-display font-bold text-lg">Reading people</h3>
+        <p class="text-sm">Every game at a table is also a game of reading the person across it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY (bonus) -->
+<section id="philosophy" class="bg-ink text-cream py-16 sm:py-24">
+  <div class="max-w-3xl mx-auto px-5 sm:px-10 flex flex-col items-center text-center gap-6">
+    <p class="text-sm font-semibold tracking-widest text-gold">ONE MORE CARD</p>
+    <h2 class="font-display font-black text-4xl sm:text-5xl leading-tight">A random idea, drawn each time.</h2>
+    <p class="text-[#FBE7C0] text-lg max-w-xl">Every dealer keeps one card face down until the end. Turn it over.</p>
+
+    <div class="w-full min-h-[420px] flex items-center justify-center mt-6">
+      <div id="back" class="flex flex-col items-center gap-8">
+        <div class="cardback w-64 h-80 rounded-2xl border-8 border-cream shadow-2xl flex items-center justify-center">
+          <span class="font-brush text-7xl w-32 h-32 rounded-full bg-gold text-red flex items-center justify-center">悟</span>
+        </div>
+        <button id="turn" class="min-h-[52px] px-8 rounded-md bg-gold text-ink font-semibold">Turn the card over</button>
+      </div>
+      <div id="reveal" class="reveal flex-col gap-8 w-full">
+        <div id="think-card" class="bg-cream text-ink rounded-xl p-8 border-t-8 border-red text-left"></div>
+        <div class="bg-red rounded-xl p-7 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <h3 id="think-q" class="font-display font-bold text-xl leading-snug text-left flex-1"></h3>
+          <div class="flex gap-4 flex-none">
+            <button id="draw-btn" class="min-h-[48px] px-6 rounded-md border-2 border-gold text-cream">Draw another</button>
+            <button id="back-btn" class="min-h-[48px] px-6 rounded-md border-2 border-gold text-cream">Turn it back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-paper text-ink py-16 sm:py-24">
+  <div class="max-w-3xl mx-auto px-5 sm:px-10 flex flex-col items-center text-center gap-6">
+    <p class="text-sm font-semibold tracking-widest text-red">CONTACT</p>
+    <h2 class="font-display font-black text-4xl sm:text-5xl leading-tight">Let's talk cards, math, or both.</h2>
+    <p class="text-lg max-w-xl">Whether it's a question about a hand, a project, or just card games in general — I'd like to hear from you.</p>
+    <a href="mailto:example@gmail.com" class="inline-flex items-center justify-center min-h-[56px] px-10 rounded-md bg-red text-cream font-semibold text-lg hover:-translate-y-0.5 transition-transform">example@gmail.com</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-red-deep border-t-[3px] border-gold text-cream py-10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#FBE7C0]">
+    <p>© 2026 Yuxin Zhu · Grade 10 · St. George's School</p>
+    <p>The 24/7 BC Gambling Support Line is 1-888-795-6111. Gambling is 19+ in British Columbia.</p>
+  </div>
+</footer>
+
+<script>
+  // mobile menu
+  var menuBtn = document.getElementById('menu-btn');
+  var menu = document.getElementById('mobile-menu');
+  var iconOpen = document.getElementById('icon-open');
+  var iconClose = document.getElementById('icon-close');
+  menuBtn.addEventListener('click', function () {
+    var isOpen = menu.classList.contains('flex');
+    menu.classList.toggle('hidden');
+    menu.classList.toggle('flex');
+    iconOpen.classList.toggle('hidden');
+    iconClose.classList.toggle('hidden');
+    menuBtn.setAttribute('aria-expanded', String(!isOpen));
+  });
+  document.querySelectorAll('#mobile-menu a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      menu.classList.add('hidden'); menu.classList.remove('flex');
+      iconOpen.classList.remove('hidden'); iconClose.classList.add('hidden');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // game tag pop-out descriptions
+  var gameInfo = {
+    poker: { title: "Poker", text: "A game of incomplete information — you're not just playing your cards, you're playing what everyone else believes about them." },
+    blackjack: { title: "Blackjack", text: "The one table game where skill genuinely narrows the house edge close to zero, if you play every hand by the numbers." },
+    baccarat: { title: "Baccarat · 百家乐", text: "China's most-played casino game today. Simple rules, almost no decisions — the drama is entirely in the odds." },
+    paigow: { title: "Pai Gow · 牌九", text: "A centuries-old Chinese tile and card game where you split one hand into two, balancing risk across both." },
+    mahjong: { title: "Mahjong · 麻将", text: "The game my grandfather taught me first. Every tile discarded is a clue, if you're paying attention." }
+  };
+  var popover = document.getElementById('game-popover');
+  var popTitle = document.getElementById('game-popover-title');
+  var popText = document.getElementById('game-popover-text');
+  var activeTag = null;
+  document.querySelectorAll('.game-tag').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var info = gameInfo[btn.getAttribute('data-game')];
+      if (activeTag === btn && !popover.classList.contains('hidden')) {
+        popover.classList.add('hidden');
+        activeTag = null;
+        return;
+      }
+      popTitle.textContent = info.title;
+      popText.textContent = info.text;
+      popover.classList.remove('hidden');
+      activeTag = btn;
+    });
+  });
+
+  // philosophy: random draw
+  var cards = [
+    {
+      who: "BLAISE PASCAL · THE WAGER",
+      h: "When you cannot know, weigh the stakes.",
+      body: "Pascal helped invent probability, then turned it on a question no probability could answer: does God exist? He argued that believing is the better bet — a small cost against an infinite possible reward. Right or wrong, it was the first time someone tried to reason about the unknowable using expected value, the same tool that prices a hand of blackjack.",
+      q: "If you can't calculate the odds of something, is betting on it still a bet — or just a guess wearing math's clothes?"
+    },
+    {
+      who: "老子 LAOZI · 道德经", zh: "祸兮福之所倚，福兮祸之所伏。",
+      h: "Fortune leans on misfortune; misfortune hides inside fortune.",
+      body: "A win and a loss are not opposites in Daoist thought — they're neighbours, like yin curling into yang. A big early win can plant the seed of ruin, teaching a player to chase a streak that was never really there. A loss can quietly teach the lesson that saves them later.",
+      q: "Think of your best win at cards. What did it almost teach you that wasn't true?"
+    },
+    {
+      who: "塞翁失马 · THE OLD MAN'S HORSE",
+      h: "Who can say what is luck?",
+      body: "An old man's horse runs away and his neighbours mourn; he only asks, 'who knows if this is bad?' The horse returns with another. His son breaks a leg riding it. That injury later keeps him out of a war that kills most young men in the village. Every 'bad beat' in the story turns out to be the reason something good survives.",
+      q: "A player calls a hand 'bad luck' the moment they lose it. How long do they usually wait before they know if that's true?"
+    },
+    {
+      who: "荀子 XUNZI · ON RITUAL AND LIMITS",
+      h: "Desire has no edge unless we draw one.",
+      body: "Xunzi argued that human wants are naturally unlimited, so societies invent ritual (礼) to give desire a shape it can live inside — not to kill it, but to keep it from consuming the person who has it. A casino's whole design is the opposite instinct: no clocks, no windows, no natural stopping point. The 'ritual' has to come from the player, because the room won't supply one.",
+      q: "What is your own ritual — the rule you set before you sit down, not after you're already losing?"
+    },
+    {
+      who: "BLAISE PASCAL · ON DIVERSION",
+      h: "We play so we don't have to sit still with ourselves.",
+      body: "In the same notebooks as his wager, Pascal wrote that people chase hunting, gambling and noise not for the prize but for the diversion — anything to avoid being alone with their own thoughts. He thought a truly contented person wouldn't need the game at all. He also thought almost nobody was that person.",
+      q: "Are you playing the game, or is the game quietly playing the part of something else you're avoiding?"
+    },
+    {
+      who: "庄子 ZHUANGZI · THE BUTTERFLY DREAM", zh: "不知周之梦为胡蝶与，胡蝶之梦为周与？",
+      h: "I don't know if I am a man who dreamed he was a butterfly, or a butterfly now dreaming he is a man.",
+      body: "Zhuangzi wakes from a dream of being a butterfly and can no longer be sure which is the dream — his waking life, or the butterfly's. He calls this uncertainty itself 'the transformation of things': the two states aren't opposites to resolve, just states to move between. A player deep in a session can lose that same edge — where the table's logic feels more real than the room around it.",
+      q: "Has a night at the table ever felt more 'real' to you than the ordinary day before or after it? What does that tell you?"
+    }
+  ];
+  var back = document.getElementById('back'), rev = document.getElementById('reveal');
+  var cardEl = document.getElementById('think-card'), qEl = document.getElementById('think-q');
+  function draw() {
+    var c = cards[Math.floor(Math.random() * cards.length)];
+    var html = '<div class="text-xs font-semibold tracking-widest text-red mb-3">' + c.who + '</div>';
+    if (c.zh) {
+      html += '<h3 class="font-cn text-2xl leading-relaxed text-red mb-2">' + c.zh + '</h3><div class="font-display font-bold text-xl mb-4">' + c.h + '</div>';
+    } else {
+      html += '<h3 class="font-display font-bold text-2xl mb-4">' + c.h + '</h3>';
+    }
+    html += '<p class="text-base leading-relaxed">' + c.body + '</p>';
+    cardEl.innerHTML = html;
+    qEl.textContent = c.q;
+  }
+  document.getElementById('turn').addEventListener('click', function () {
+    draw();
+    back.classList.add('hidden');
+    rev.classList.remove('on'); void rev.offsetWidth; rev.classList.add('on');
+    document.getElementById('back-btn').focus();
+  });
+  document.getElementById('draw-btn').addEventListener('click', function () {
+    draw();
+    rev.classList.remove('on'); void rev.offsetWidth; rev.classList.add('on');
+  });
+  document.getElementById('back-btn').addEventListener('click', function () {
+    rev.classList.remove('on');
+    back.classList.remove('hidden');
+    document.getElementById('turn').focus();
+  });
+</script>
+</body>
+</html>
